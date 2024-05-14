@@ -59,7 +59,7 @@ function right() {
 		slideImage.src = images[i];
 	}
 }
-setInterval( right(), 10000);
+setInterval( ()=>right(), 10000);
 
 /**Dynamically add product to HTML */
 
