@@ -9,14 +9,14 @@
 </head>
 <body class="bg-cyan-600">
     <!-- navbar-->
-    <div class="navbar flex justify-between px-5 bg-gray-50 py-3 sticky top-[0px]">
+    <div class="navbar flex justify-between px-5 bg-gray-50 py-3 sticky top-[0px] items-center">
         <div class="icon relative" >
             <i class="fa-solid fa-bars lg:hidden" onclick="showNav()"></i>
             <div class="navitems bg-gray-50 absolute p-5 left-[-20px] hidden duration-100 lg:block lg:static">
             <ul class="list-none lg:flex lg:justify-around lg:w-48">
-                <li class="text-sm">Home</li>
-                <li class="text-sm">About</li>
-                <li class="text-sm">Contact</li>
+                <li class="text-sm font-semibold">Home</li>
+                <li class="text-sm font-semibold">About</li>
+                <li class="text-sm font-semibold">Contact</li>
             </ul>
         </div>
         </div>
@@ -25,8 +25,20 @@
            <span class="text-lg font-bold" >Fullsite</span> 
         </div>
     </div>
-    <div class="slider">
-        <img src="./images/slide.jpg" alt="" class="w-full">
+    <div class="slider lg:flex lg:justify-center">
+        <img src="" alt="" class="slide w-full lg:w-[90vw] lg:mt-3 lg:h-[60vh]">
+    </div>
+
+    <!--Products -->
+    <div class="products grid grid-cols-2 mt-5 gap-3 px-2 lg:grid-cols-4">
+        <div class="product flex flex-col justify-center">
+            <img src="./images/p5.jpg" class="product-image">
+            <p class="title text-sm font-bold text-center">Forest</p>
+            <p class="price text-center">500</p>
+            <button type="button" class="text-center bg-gray-50 p-1 rounded-lg shadow-lg shadow-slate-800">Add to cart</button>
+        </div>
+        
+        
     </div>
 
     <script src="./script.js"></script>
