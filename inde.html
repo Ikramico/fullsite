@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <title>Document</title>
+
 </head>
 <body class="bg-cyan-600">
     <!-- navbar-->
@@ -17,25 +19,45 @@
                 <li class="text-sm font-semibold">Home</li>
                 <li class="text-sm font-semibold">About</li>
                 <li class="text-sm font-semibold">Contact</li>
+                <li class="text-sm font-semibold"><button class="cartbt"><i class="fa-solid fa-bag-shopping"></i></button></li>
             </ul>
         </div>
         </div>
-        
+        <div class="search w-[40vw]">
+            <div class="relative">
+                <input type="text" class="w-full border-2 border-gray-300 bg-white h-10 px-5 pr-10 rounded-full text-sm focus:outline-none searchbox" placeholder="Search">
+                <button type="submit" class="absolute right-0 top-0 mt-2 mr-4">
+                   <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+                <div class="search-item bg-white w-[38vw] absolute  ml-4 hidden">
+                   
+              </div>
+            </div>
+        </div>
         <div class="logo">
            <span class="text-lg font-bold" >Fullsite</span> 
         </div>
     </div>
+
+ 
+
+
     <div class="slider lg:flex lg:justify-center">
         <img src="" alt="" class="slide w-full lg:w-[90vw] lg:mt-3 lg:h-[60vh]">
     </div>
 
+
+
+    <div class="result bg-white w-[90vw] h-[40vh] m-auto mt-5 flex justify-center hidden  relative">
+         
+    </div>
     <!--Products -->
     <div class="products grid grid-cols-2 mt-5 gap-3 px-2 lg:grid-cols-4">
         
     </div>
 
     <!--Cart-->
-    <div class="fixed top-0 w-96 bg-gray-50 h-[100vh]">
+    <div class="fixed top-0 w-96 bg-gray-50 h-[100vh] cartmain hidden">
 <div class="cart">
 
 </div>

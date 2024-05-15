@@ -109,6 +109,71 @@ showCart.innerHTML ='';
 
 
 }
+/**Search */
 
+let tit =[];
+
+products.forEach(
+	(item)=>{
+		tit.push(item.title)
+	}
+)
+tit.forEach((i)=>{
+	
+	searchitem.innerHTML+=`<button  class="px-5 py-2 hover:bg-black hover:text-white w-full text-left pointer"> ${i}</button> </br>`;
+	 
+})
+// searchitem.innerHTML= tit;
+
+search.onkeyup = function () {
+	searchitem.classList.toggle("hidden")
+	let content = [];
+	let isearch = search.value.toLowerCase();
+	
+	if (isearch) {
+	  content = products.forEach((item)=>{
+		let it =item.title.toLowerCase();
+		
+		if(it.match(isearch)){
+
+			searchitem.innerHTML=`<button onclick="pusa(${item.id})"  class='search_button hover:bg-black hover:text-white w-full text-left pointer px-5 py-2' >${item.title}</button>`;
+	
+		}
+		
+	  }) 
+	}
+	
+	
+};
+// function con(id){
+// 	console.log(id)
+// }
+
+function pusa(id){
+		
+        final.classList.toggle("hidden")
+	final.innerHTML = `
+	<button onclick="hide()" class="cross absolute right-5"><i class="fa-solid fa-xmark"></i></button>
+	<div class="product flex flex-col justify-center w-[20vw]">
+			<img src="${products[id-1].image}" class="product-image h-[30vh] ">
+			<p class="title text-sm font-bold text-center">${products[id-1].title}</p>
+			<p class="price text-center">${products[id-1].price}</p>
+			
+		</div>`;
+		// document.getElementsByTagName("body")[0].innerHTML=`
+		// <div class="product flex flex-col justify-center">
+		// 		<img src="${products[id-1].image}" class="product-image h-[10vh]">
+		// 		<p class="title text-sm font-bold text-center">${products[id-1].title}</p>
+		// 		<p class="price text-center">${products[id-1].price}</p>
+				
+		// 	</div>`;
+}
+
+function hide(){
+	final.classList.toggle("hidden");
+}
+document.querySelector(".cartbt").addEventListener("click",()=>{
+      document.querySelector(".cartmain").classList.toggle('hidden')
+})
 
 
